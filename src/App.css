@@ -3,7 +3,7 @@ body * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: white;
+    color: hsl(0, 0%, 80%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,16 +28,20 @@ h1 {
 }
 
 .quote {
-    background: linear-gradient(90deg, hsl(227, 27%, 15%) 0%, hsl(227, 27%, 25%) 100%);
+    background: linear-gradient(90deg, hsl(227, 27%, 10%) 0%, hsl(227, 27%, 20%) 100%);
 }
 .qa {
-    background: linear-gradient(90deg, hsl(215, 54%, 15%) 0%, hsl(215, 54%, 25%) 100%);
+    background: linear-gradient(90deg, hsl(215, 54%, 10%) 0%, hsl(215, 54%, 20%) 100%);
+}
+.qa *:nth-child(2n + 1) {
+    color: bisque;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 .qa *:nth-child(2n) {
     margin-bottom: 10px;
 }
 
-.quoestion {
-    color: bisque;
-    font-weight: bold;
+p {
+    line-height: 2;
 }
