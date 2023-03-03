@@ -21,27 +21,35 @@ function App() {
             );
     }, []);
 
-    console.log(items);
-
     if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
         return <div>Loading...</div>;
     } else {
         return (
-            <ul>
+            <section className="container">
+                <h1>Programmer Jokes</h1>
                 {items.jokes.map(item => {
                     if (item.type === 'single') {
-                        return <li key={item.id}>{item.joke}</li>;
+                        return (
+                            <div
+                                className="quote box"
+                                key={item.id}>
+                                <p>{item.joke}</p>
+                            </div>
+                        );
                     } else {
                         return (
-                            <li key={item.id}>
-                                {item.setup} {item.delivery}
-                            </li>
+                            <div
+                                className="qa box"
+                                key={item.id}>
+                                <p className="quoestion">Question: {item.setup}</p>
+                                <p className="answer">Answer: {item.delivery}</p>
+                            </div>
                         );
                     }
                 })}
-            </ul>
+            </section>
         );
     }
 }
