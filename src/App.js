@@ -43,8 +43,10 @@ function App() {
                             <div
                                 className="qa box"
                                 key={item.id}>
-                                <p className="quoestion">Question: {item.setup}</p>
-                                <p className="answer">Answer: {item.delivery}</p>
+                                <p>Question:</p>
+                                <p className="quoestion">{item.setup}</p>
+                                <p>Answer:</p>
+                                <p className="answer"> {item.delivery}</p>
                             </div>
                         );
                     }
